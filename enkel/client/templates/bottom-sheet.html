@@ -1,0 +1,28 @@
+<md-bottom-sheet class="md-grid">
+  <md-list layout layout-align="center center">
+    <md-item ng-repeat="item in items">
+      <md-button class="md-grid-item-content" aria-label="{{item.name}}" ng-click="listItemClick($index)">
+        <div class="md-icon-container">
+          <md-inline-grid-icon icon="{{item.icon}}"></md-inline-grid-icon>
+        </div>
+        <p class="md-grid-text"> {{ item.name }} </p>
+      </md-button>
+    </md-item>
+      <md-item>
+        <md-button class="md-grid-item-content" aria-label="{{item.name}}" ng-click="listItemClick($index)">
+                <div class="md-icon-container">
+                  <md-inline-grid-icon icon="img/linkedin_r.svg"></md-inline-grid-icon> 
+                </div>
+              <p class="md-grid-text">LinkedIn</p>
+          </md-button>
+      </md-item>
+      <md-item>
+          <div class="md-icon-container">
+              <span class="extra-length">Hannes Waller</span>
+              <span>hkwaller@gmail.com</span>
+              <span>+4795005552</span>
+          </div>
+      </md-item>
+      
+  </md-list>
+</md-bottom-sheet>
