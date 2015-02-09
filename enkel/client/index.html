@@ -3,37 +3,29 @@
 <head>
     <title>Anagram Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="libs/bootflat/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body ng-app="FinnApp" ng-controller="AnagramFinderCtrl as ctrl">
     <md-content>    
-        <div class="container" ng-cloak>
-            <div class="row" layout="column">
-                <div flex="100" layout-padding>
+        <div layout="column" class="container box-shadow" ng-cloak>
+            <div flex="100" layout-padding>
+                <div class="logo">
                     <h1>Anagramfinner</h1>
-                    <textarea ng-model="ctrl.words" rows="10" class="word-area form-control"></textarea>
                 </div>
-                <div layout layout-align="center center" layout-padding>
-                    <md-button type="button" class="md-raised md-primary md-button md-default-theme big-button" ng-click="ctrl.findAnagrams()">Finn anagrammer</md-button>
-                </div>
+                <textarea ng-model="words" rows="10" class="word-area form-control"></textarea>
             </div>
-            <div class="row container">
-                <div class="col col-md-12">
-                    <div ng-repeat="w in ctrl.results track by $index">
-                        <strong ng-hide="w.anagrams.length < 1">{{ w.word }}</strong>
-                        <span ng-repeat="anagram in w.anagrams">
-                            {{ anagram }}
-                        </span>
-                    </div>
-                </div>
+            <div layout layout-align="center center" layout-padding>
+                <md-button type="button" class="md-raised md-primary md-button md-default-theme big-button" ng-click="ctrl.findAnagrams()">Søk</md-button>
             </div>
-        </div>
-        <div layout layout-align="center center" class="footer">
-            <md-button class="md-primary" ng-click="ctrl.showGridBottomSheet($event)">
-              ^ Hannes Waller ^
-            </md-button>
+            <div ng-repeat="w in ctrl.results track by $index" ng-animate="'animate'">
+                <strong ng-hide="w.anagrams.length < 1">{{ w.word }}</strong>
+                <span ng-repeat="anagram in w.anagrams">
+                    {{ anagram }}
+                </span>
+            </div>
         </div>
     </md-content>
     <script src="libs/angular/angular.min.js"></script>
@@ -41,6 +33,8 @@
     <script src="libs/angular-aria/angular-aria.min.js"></script>
     <script src="libs/angular-material/angular-material.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
 </body>
 
 </html>

@@ -2,6 +2,10 @@ textarea {
     resize: none;
 }
 
+body {
+    background: #fff;
+}
+
 .vertical-center {
     position: absolute;
     top: 50%;
@@ -10,22 +14,30 @@ textarea {
     -ms-transform: translate(0,-50%);
 }
 
-.footer {
-    position: fixed;
-    background: #f4f2f2;
-    width: 100%;
-    bottom: 0px;
-    padding: 2em;
-}
-
 .text-center {
     text-align: center;
 }
 
 .container {
     margin-bottom: 4em;
+    margin-top: 4em;
+    padding: 3em;
 }
 
 .big-button {
     padding: 1.5em 3em 1.5em 3em;
+}
+
+.logo {
+    position: relative;
+    bottom: 2em;
+    font-family: 'Gloria Hallelujah', cursive;
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    padding: 0.5em;
+    color: #484646;
+}
+
+.box-shadow {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
