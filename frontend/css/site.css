@@ -1,0 +1,26 @@
+.container {
+    margin-bottom: 4em;
+    margin-top: 4em;
+    padding: 3em;
+}
+
+.full-width {
+    width: 100%;
+    padding: 3em;
+}
+
+#table-head {
+    background: #e74c3c;
+    color: #fff;
+}
+
+#main-button {
+    width: 300px;
+    padding: 1em 2em;
+    float: none;
+    margin: 0 auto;
+}
+
+.thirty-percent-width {
+    width: 30%;
+}

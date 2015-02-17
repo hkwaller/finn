@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "angular": "^1.3.12",
-    "angular-animate": "^1.3.12",
     "bootflat": "^2.0.4",
     "express": "^4.11.2"
   }
